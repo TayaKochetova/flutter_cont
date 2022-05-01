@@ -82,14 +82,6 @@ class _UsersListState extends State<UsersList> {
           validator: (value) {
             if (value!.isEmpty) return 'Введите имя бабочки';
           },
-          /*onChanged: (value) {
-            setState(() {
-              for (int i = 0; i < butterflies.length; i++) {
-                String nameButterfly = butterflies.elementAt(i).name;
-                if (nameButterfly.startsWith(value)) {}
-              }
-            });
-          },*/
         ),
       ),
     );
@@ -116,9 +108,6 @@ class _UsersListState extends State<UsersList> {
           onPressed: () {
             setState(() {});
             if (_globalKey.currentState!.validate()) {
-              //Color color = Colors.red;
-              //String text;
-
               for (int i = 0; i < butterflies.length; i++) {
                 String nameButterfly = butterflies.elementAt(i).name;
                 if (nameButterfly.startsWith(_controller.value.text)) {
